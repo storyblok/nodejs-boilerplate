@@ -1,7 +1,5 @@
 var webController = require('./controllers/web');
-//var renderer = require('./services/hbsRenderer');
 var renderer = require('./services/renderer');
-//var components = require('./services/components');
 var minifier = require('koa-html-minifier');
 var logger = require('koa-logger');
 var route = require('koa-route');
