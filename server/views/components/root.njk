@@ -1,0 +1,9 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  {% for blok in story.content.body %}
+    {{ blok|component }}
+  {% endfor %}
+
+{% endblock %}
