@@ -17,5 +17,5 @@ var nunjucksOptions = {
 };
 
 module.exports = function() {
-  return nunjucksRender(__dirname + '/../views', nunjucksOptions);
+  return nunjucksRender(__dirname + '/../../views', nunjucksOptions);
 }

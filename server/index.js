@@ -4,6 +4,9 @@ var minifier = require('koa-html-minifier');
 var logger = require('koa-logger');
 var route = require('koa-route');
 var koa = require('koa');
+var config = require('./config.json');
+
+
 var app = koa();
 
 // x-response-time
@@ -36,5 +39,5 @@ app.use(minifier({
 app.use(route.get('/', webController.index));
 app.use(route.get('/en/*', webController.show));
 
-app.listen(3009);
-console.log('listening on port 3009');
+app.listen(config.server.port);
+console.log('listening on port ' + config.server.port);
