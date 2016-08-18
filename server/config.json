@@ -4,7 +4,8 @@
     },
     "storyblok": {
         "space_id": "39919",
-        "token": "XXXXX"
+        "token": "XXXXX",
+        "default_language": "en"
     },
     "templates": {
         "path": "/../../views"

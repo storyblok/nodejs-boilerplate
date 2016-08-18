@@ -1,4 +1,5 @@
 var story = require('../models/story');
+var config = require('../config');
 
 module.exports = {
   index: show,
@@ -8,10 +9,10 @@ module.exports = {
 function* show() {
 
   var stories = yield [
-    story.find.call(this, 'de/home'),
-    story.find.call(this, 'de/global/footer'),
-    story.find.call(this, 'de/global/header'),
-    story.find.call(this, 'de/global/labels')
+    story.find.call(this, config.storyblok.default_language + '/home'),
+    story.find.call(this, config.storyblok.default_language + 'de/global/footer'),
+    story.find.call(this, config.storyblok.default_language + 'de/global/header'),
+    story.find.call(this, config.storyblok.default_language + 'de/global/labels')
   ];
 
 
