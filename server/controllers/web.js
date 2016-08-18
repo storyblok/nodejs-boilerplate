@@ -1,17 +1,20 @@
 var story = require('../models/story');
+var config = require('../config');
 
 module.exports = {
   index: show,
   show: show
 }
 
-function *show() {
+function* show() {
+
   var stories = yield [
-    story.find.call(this, 'en/home'),
-    story.find.call(this, 'en/global/footer'),
-    story.find.call(this, 'en/global/header'),
-    story.find.call(this, 'en/global/labels')
+    story.find.call(this, config.storyblok.default_language + '/home'),
+    story.find.call(this, config.storyblok.default_language + '/global/footer'),
+    story.find.call(this, config.storyblok.default_language + '/global/header'),
+    story.find.call(this, config.storyblok.default_language + '/global/labels')
   ];
+
 
   yield this.render('components/root', {
     story: stories[0],

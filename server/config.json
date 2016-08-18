@@ -1,0 +1,13 @@
+{
+    "server": {
+        "port": "3009"
+    },
+    "storyblok": {
+        "space_id": "39919",
+        "token": "XXXXX",
+        "default_language": "en"
+    },
+    "templates": {
+        "path": "/../../views"
+    }
+}

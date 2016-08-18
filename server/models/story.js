@@ -1,14 +1,13 @@
 var url = require('url');
 var request = require('co-request');
 var cache = require('memory-cache');
-var token = '';
-var spaceId = '';
+var config = require('../config.json');
 
-var getOptions = function(id, version) {
+var getOptions = function (id, version) {
   return {
-    url: 'https://api.storyblok.com/v1/cdn/spaces/' + spaceId + '/stories/' + id,
+    url: 'https://api.storyblok.com/v1/cdn/spaces/' + config.storyblok.space_id + '/stories/' + id,
     qs: {
-      token: token,
+      token: config.storyblok.token,
       version: version
     },
     headers: { 'User-Agent': 'nodejs' }

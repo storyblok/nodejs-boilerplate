@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>{{story.name}}</title>
+    <style>
+        body {
+        padding: 80px;
+        font: 16px Helvetica, Arial;
+        }
+    </style>
+</head>
+<body>
+
+	<div class="root">
+
+
+        <!-- no index start -->
+        {% for blok in header.content.body %}
+            {{ blok|component }}
+        {% endfor %}
+        <!-- no index end -->
+
+        <main class="main" role="main">
+            {% block content %} {% endblock %}
+        </main>
+
+        <!-- no index start -->
+        {% for blok in footer.content.body %}
+            {{ blok|component }}
+        {% endfor %}
+        <!-- no index end -->
+
+	</div>
+
+
+</body>
+</html>
