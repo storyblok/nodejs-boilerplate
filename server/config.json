@@ -1,9 +1,12 @@
 {
-  "server": {
-    "port": "3009"
-  },
-  "storyblok": {
-    "space_id": "39919",
-    "token": "msMR9aRZSyXYn9icf85xfQtt"
-  }
+    "server": {
+        "port": "3009"
+    },
+    "storyblok": {
+        "space_id": "39919",
+        "token": "msMR9aRZSyXYn9icf85xfQtt"
+    },
+    "templates": {
+        "path": "/../../views"
+    }
 }

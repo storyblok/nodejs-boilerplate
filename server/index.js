@@ -37,7 +37,7 @@ app.use(minifier({
 }));
 
 app.use(route.get('/', webController.index));
-app.use(route.get('/en/*', webController.show));
+app.use(route.get('/de/*', webController.show));
 
 app.listen(config.server.port);
 console.log('listening on port ' + config.server.port);

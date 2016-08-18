@@ -3,7 +3,7 @@ var request = require('co-request');
 var cache = require('memory-cache');
 var config = require('../config.json');
 
-var getOptions = function(id, version) {
+var getOptions = function (id, version) {
   return {
     url: 'https://api.storyblok.com/v1/cdn/spaces/' + config.storyblok.space_id + '/stories/' + id,
     qs: {

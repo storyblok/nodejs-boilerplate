@@ -1,1 +1,15 @@
-<div>sectionf kajsdlk fsafsad {{ _uid }}</div>
+
+<section class="section" data-grid>
+
+
+    <article class="section__content" data-col-sm="10" data-col-md="{{body_width |default(4)}}" data-col-right>
+        {% if body %}
+            {% for blok in body %}
+                {% if blok.component %}
+                    {{ blok | component}}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </article>
+
+</section>

@@ -5,13 +5,15 @@ module.exports = {
   show: show
 }
 
-function *show() {
+function* show() {
+
   var stories = yield [
-    story.find.call(this, 'en/home'),
-    story.find.call(this, 'en/global/footer'),
-    story.find.call(this, 'en/global/header'),
-    story.find.call(this, 'en/global/labels')
+    story.find.call(this, 'de/home'),
+    story.find.call(this, 'de/global/footer'),
+    story.find.call(this, 'de/global/header'),
+    story.find.call(this, 'de/global/labels')
   ];
+
 
   yield this.render('components/root', {
     story: stories[0],
