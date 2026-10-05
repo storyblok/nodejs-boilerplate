@@ -1,3 +1,6 @@
+> [!WARNING]
+> This repository is no longer maintained.
+
 # storyblok example of using koa and node.js
 
 Setup:  
